@@ -29,7 +29,7 @@ body{
 .main{
     width: 100%;
     height: calc(100% - 60px);
-    background-image: url(/img/i.jpg);
+    background-image: url(../img/i.jpg) 90% 100%/auto 85% no-repeat;
     
 }
 .title__container{
