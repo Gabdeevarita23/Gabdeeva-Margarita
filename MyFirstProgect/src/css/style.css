@@ -95,7 +95,7 @@ body{
 }
 .menu{
     float:left;
-    padding-left: 280px;
+    padding-left: 240px;
    }
 .menu li{
     float: left;
@@ -366,7 +366,8 @@ span{
 #iiii{
     margin-left: 640px;
 }
-#iiiii{
+/*красивая карусель кейса*/
+#carouselExampleIndicators{
     margin-left: 230px;
     width: 70%;
     height: 70%;  
@@ -392,9 +393,8 @@ span{
 }
 #client2{
     margin-top: 20px;
-   
 }
-.title__container2 input{
+.title__container10 input{
     height: 40px;
     text-align: center;
     border: 2px solid #6d7682;
@@ -403,17 +403,18 @@ span{
     color: #6d7682;
     margin-left: 230px;
     font-size: 13px;
-    padding: 10px 16px;
+    padding: 5px 16px 10px 16px;
+    margin-top: 20px;
 }
-.title__container2 input{
+.title__container10 input{
     transition: all 0.3s;
     transform: scale(1);
 }
-.title__container2 input:hover{
+.title__container10 input:hover{
     background: #344051;
     color: white;
 }
-.title__container2 input:active{
+.title__container10 input:active{
     transform: scale(1.1);
 }
 .price h2{
@@ -445,12 +446,9 @@ select{
 #p{
     margin-top: 35px;
 }
-#oo{
-   float: left;
-}
-#o{
-    float: left;
-    text-align: end;
+.oo{
+   padding-left: 850px;
+    width: 10px;
 }
 .statistics h2{
    font-family: Arial, sans-serif; 
@@ -538,14 +536,135 @@ span1{
     height: 35%;
     overflow: hidden;
     box-sizing: border-box;
-    margin-bottom: 50px;
     margin-left: 550px;
 }
-#tt{
-    margin-bottom: 45px;
+/*анимация отзывов*/
+.kopansecegun {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
-#ttt{
-    margin-bottom: 150px;
+.kopansecegun__nav {
+  width: 12px;
+  height: 12px;
+  margin: 2rem 12px;
+  border-radius: 50%;
+  z-index: 10;
+  outline: 6px solid #989393;
+  outline-offset: -6px;
+  box-shadow: 0 0 0 0 #101010, 0 0 0 0 rgba(45, 43, 43, 0);
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.kopansecegun__nav:checked {
+  -webkit-animation: check 0.4s linear forwards;
+  animation: check 0.4s linear forwards;
+}
+.kopansecegun__nav:checked:nth-of-type(1) ~ .kopansecegun__ccpisicon {
+  left: -0%;
+}
+.kopansecegun__nav:checked:nth-of-type(2) ~ .kopansecegun__ccpisicon {
+  left: -99%;
+}
+.kopansecegun__nav:checked:nth-of-type(3) ~ .kopansecegun__ccpisicon {
+  left: -199%;
+}
+.kopansecegun__nav:checked:nth-of-type(4) ~ .kopansecegun__ccpisicon {
+  left: -299%;
+}
+.kopansecegun__ccpisicon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  -webkit-transition: left 0.4s;
+  transition: left 0.4s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+}
+.kopansecegun__cegunpisicing {
+  height: 120px;
+  padding: 2rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.kopansecegun__image {
+  font-size: 2.7rem;
+  color: #2196F3;
+}
+.kopansecegun__simusceguns {
+  font-weight: 500;
+  margin: 2rem 0 1rem;
+  text-shadow: 0 1px 1px rgba(27, 26, 26, 0.1);
+  text-transform: uppercase;
+}
+.kopansecegun__omnismus {
+  color: #736f6f;
+  margin-bottom: 3rem;
+  max-width: 415px;
+}
+@-webkit-keyframes check {
+  50% {
+  outline-color: #333;
+  box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+  }
+  100% {
+  outline-color: #333;
+  box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  }
+}
+@keyframes check {
+  50% {
+  outline-color: #333;
+  box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+  }
+  100% {
+  outline-color: #333;
+  box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+  }
 }
 .contacts h2{
     font-family: Arial, sans-serif; 
@@ -631,7 +750,7 @@ span1{
     font-size: 15px;
     padding-top: 10px;
 }
-.title__container2 input{
+.title__container2 Button{
     height: 40px;
     text-align: center;
     border: 2px solid #ffffff;
@@ -639,7 +758,18 @@ span1{
     border-radius: 5px;
     color: #ffffff;
     font-size: 13px;
-    margin: 40px 0px 0px 0px;
+    margin: 15px 0px 0px 0px;
     padding: 10px 16px;
+}
+.title__container2 Button{
+    transition: all 0.3s;
+    transform: scale(1);
+}
+.title__container2 Button:hover{
+    background: #344051;
+    color: white;
+}
+.title__container2 Button:active{
+    transform: scale(1.1);
 }
 
