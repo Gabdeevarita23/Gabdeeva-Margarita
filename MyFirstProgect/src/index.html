@@ -192,27 +192,29 @@
                 <br>+ 7 953  146 32 66
             </div>
             <p id = "ttttt"> <br>ОСТАВЬТЕ МНЕ СООБЩЕНИЕ</p>
+            <form action = "php/test.php" method="post">
             <div class="title__container3">
-                <input type = "text" name "text_input" value="" placeholder = "Имя">
+                <input type = "text" name="text_input" value="" placeholder = "Имя">
             </div>
             <div class="title__container4">
-            <input type = "text" name "text_input" value="" placeholder = "Email">
+            <input type = "text" name="text_input1" value="" placeholder = "Email">
             </div>
             <div class="title__container5">
-            <textarea placeholder = "Сообщение" type = "text" name "text_input1" id = "1" cols = "100" rows = "6"></textarea> 
+            <textarea placeholder = "Сообщение" type = "text" name="textarea" id = "1" cols = "100" rows = "6"></textarea> 
             </div>
        <!-- Button trigger modal -->
-        <div class = "title__container2">
-<Button type="Button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <div class = "title__container2">
+<button type="button" class="btn btn-primary" name= "title__container2" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Отправить
-</Button>               
-<!-- Modal -->
+</button>
+</div>                  
+<!-- Модальное окно -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Подтверждение отправки сообщения</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="exampleModalLabel">Проверка отправки сообщения</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
         Ваше сообщение отправлено!
@@ -223,11 +225,15 @@
     </div>
   </div>
 </div>
-</div>
-</div>
+
+            </form>
+        </div>
         <script src="js/jquery-3.6.0.js"></script> 
         <script src = "js/jquery.spincrement.min.js"></script> 
         <script src = "js/bootstrap.bundle.min.js"></script>
+        <script src = "js/wow.min.js"></script>
+        <script>new WOW().init();</script>
+        <script src = "js/jquery.maskedinput.min.js"></script>
         <script src = "js/myScript.js"></script>
         <script>
   window.onload = function () {

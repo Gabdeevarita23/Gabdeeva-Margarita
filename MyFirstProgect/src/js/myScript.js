@@ -1,5 +1,6 @@
+console.log("Привет, мир!");
 //скролл страницы с подсвечиванием навигации
-$(document).ready(Function(){
+$(document).ready(Function()){
 $(window).scroll(()=>{ 
     let scrollDistance = $(window).scrollTop();
     $(".selection").each ((i, el)=>{

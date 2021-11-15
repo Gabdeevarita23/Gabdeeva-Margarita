@@ -445,6 +445,10 @@ select{
 }
 #p{
     margin-top: 35px;
+    display: block;
+}
+.o{
+    float: left;
 }
 .oo{
    padding-left: 850px;
@@ -760,6 +764,12 @@ span1{
     font-size: 13px;
     margin: 15px 0px 0px 0px;
     padding: 10px 16px;
+}
+.modal-title{
+    color: black;
+}
+.modal-body{
+    color: black;
 }
 .title__container2 Button{
     transition: all 0.3s;
