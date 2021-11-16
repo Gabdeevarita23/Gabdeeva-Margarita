@@ -40,7 +40,28 @@
             <img id = "ii" src = "../src/img/i-i.jpg">
             <div class = ".element-animation"> Меня зовут Маргарита, мне 18 лет и я студентка 3 курса факультета "Информационные системы и программирование" <br> Санкт-Петербургского Политехнического университета Петра Великого. <br> Вот уже третий год я учусь на программиста и пишу сайты на заказ.</div>
             <div class = ".element-animation" id = "i">В свободное от учебы время я работаю детским тренерам по танцам, а именно хип-хоп. Работаю в двух студиях <br> и тренирую почти 40 детей! Ставлю танцевальные постановки, с которыми мы выступаем, ездим на соревнования и фестивали. <br> Так же танцую в группе поддержки и работаю на матчах МХЛ и ВХЛ хоккейного клуба "Динамо".</div>
-            <input type="button" value="Скачать резюме">
+             <!-- Button trigger modal -->
+                <div class = "title__container1">
+<button type="button" class="btn btn-primary" name= "title__container2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Скачать резюме
+</button>
+</div>                  
+                <!-- Модальное окно -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Скачивание резюме</h5>
+      </div>
+      <div class="modal-body">
+        Резюме будет скачано автоматически!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
             </div></div>
         <div class="services" id = "services">
             <h2>ЧТО Я УМЕЮ</h2>
@@ -176,7 +197,7 @@
 </div>
             
         </div>
-        <div class = "contacts" id = "contacts" >
+        <div class = "contacts" id = "contacts">
             <h2>МОИ КОНТАКТЫ</h2>
             <img id = "iiiiiiiii" src = "img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png">
             <p id = "tttt">Связь со мной</p>
@@ -192,42 +213,23 @@
                 <br>+ 7 953  146 32 66
             </div>
             <p id = "ttttt"> <br>ОСТАВЬТЕ МНЕ СООБЩЕНИЕ</p>
-            <form action = "php/test.php" method="post">
+            <form action = "php/mail.php" method="post">
             <div class="title__container3">
-                <input type = "text" name="text_input" value="" placeholder = "Имя">
+                <input type = "text" name="text_name" value="" placeholder = "Имя">
             </div>
             <div class="title__container4">
-            <input type = "text" name="text_input1" value="" placeholder = "Email">
+            <input type = "text" name="text_email" value="" placeholder = "Email">
             </div>
             <div class="title__container5">
             <textarea placeholder = "Сообщение" type = "text" name="textarea" id = "1" cols = "100" rows = "6"></textarea> 
-            </div>
-       <!-- Button trigger modal -->
-                <div class = "title__container2">
-<button type="button" class="btn btn-primary" name= "title__container2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Отправить
-</button>
-</div>                  
-<!-- Модальное окно -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Проверка отправки сообщения</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
-      </div>
-      <div class="modal-body">
-        Ваше сообщение отправлено!
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-            </form>
+            <div class="title__container2">
+            <input type="submit" value="Отправить">
         </div>
+            </div>
+            </form>
+             <div class = "row"><div class = "col-12" > <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0fd4f43e7b100c223ad461dcc42a998375408088dfad45de87c31cdb8eed68a0&amp;width=100%25&amp;height=392&amp;lang=ru_RU&amp;scroll=false"></script>
+                 </div></div>
+            </div>
         <script src="js/jquery-3.6.0.js"></script> 
         <script src = "js/jquery.spincrement.min.js"></script> 
         <script src = "js/bootstrap.bundle.min.js"></script>

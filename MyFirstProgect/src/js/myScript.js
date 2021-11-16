@@ -1,11 +1,13 @@
-console.log("Привет, мир!");
 //скролл страницы с подсвечиванием навигации
-$(document).ready(Function()){
-$(window).scroll(()=>{ 
+$(document).ready(function(){
+                  
+$(window).scroll(() => {
     let scrollDistance = $(window).scrollTop();
-    $(".selection").each ((i, el)=>{
-    if ($(el).offset().top - $("nav").outerHeight() scrollDistance){
-    $("nav a").each ((i, el)=>{  
+    
+    $(".selection").each((i, el) => {
+        
+    if ($(el).offset().top - $("nav").outerHeight() <= scrollDistance){
+    $("nav a").each ((i, el) => {  
     if ($(el).hasClass("active")){
         $(el).removeClass("active");
     }
@@ -13,8 +15,8 @@ $(window).scroll(()=>{
 $('nav li:eq('+ i +')').find ('a').addClass('active');
     }
  });
-});              
-});
+});   
+}); 
 //плавный скролл
 $('a[href^="#"]').click(function(){ 
     let valHref = $(this).attr("href");
@@ -30,7 +32,7 @@ elements.each ((i, el)=> {
 function onEntry (entry){
     entry.forEach(change => {
         if (change.isInteraction){
-            change.target.classList.add('show-animation')
+            change.target.classList.add('show-animationimg')
         }
     });
 }
@@ -87,4 +89,20 @@ let type = prompt ("Адаптивность");
 console.log(type);
 }
 }
+/*отправка формы*/
+$(document).ready(function () {
+$('form').submit(function(event){
+    event.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: "php/mail.php",
+        data: $(this).servialize()
+    }).done(function(){
+        $(this).find ("input").val ("");
+        alert("Успешно отправлено!");
+        $("form").trigger("reset");
+    });
+            return false;
+});
+});                
 /*<div class="uCalc_378702"></div><script> var widgetOptions378702 = { bg_color: "transparent" }; (function() { var a = document.createElement("script"), h = "head"; a.async = true; a.src = (document.location.protocol == "https:" ? "https:" : "http:") + "//ucalc.pro/api/widget.js?id=378702&t="+Math.floor(new Date()/18e5); document.getElementsByTagName(h)[0].appendChild(a) })();</script>*/
