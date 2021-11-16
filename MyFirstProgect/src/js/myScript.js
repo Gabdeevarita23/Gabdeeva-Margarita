@@ -23,9 +23,9 @@ $('a[href^="#"]').click(function(){
     $('html,body').animate({scrollTop: $(valHref).offset().top + "px"})
 });
 //анимация фото с задержкой
-let options = {threshold: {0.5}};
+let options = {threshold: [0.5]};
 let elements = $('.img');
-let observer = new InteractionObserver (onEntry, options);
+let observer = new IntersectionObserver (onEntry, options);
 elements.each ((i, el)=> {
     observer.observe(el);  
 });
@@ -37,11 +37,11 @@ function onEntry (entry){
     });
 }
 //анимация текста с задержкой
-let options = {threshold: {0.8}};
-let observer = new InteractionObserver (onEntry, options);
-let elements = $('.element-animation');
+let options2 = {threshold: [0.5]};
+let observer2 = new IntersectionObserver (onEntry, options2);
+let elements2 = $('.element-animation');
 elements.each ((i, el)=> {
-    observer.observe(el);  
+    observer2.observe(el);  
 });
 function onEntry (entry){
     entry.forEach(change => {
@@ -79,6 +79,7 @@ $(document).ready(function () {
     });
 });
 //калькулятор
+/*
 public class Calc{
  public static void main (string args[]){   
 let type = prompt ("Тип сайта");
@@ -88,7 +89,7 @@ console.log(type);
 let type = prompt ("Адаптивность");
 console.log(type);
 }
-}
+}*/
 /*отправка формы*/
 $(document).ready(function () {
 $('form').submit(function(event){
